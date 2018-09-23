@@ -6,7 +6,7 @@ extern crate test;
 use test::Bencher;
 
 #[bench]
-fn fib50(b: &mut Bencher) {
+fn fib_50(b: &mut Bencher) {
     b.iter(|| {
         let _val = fib::fib_memo(50);
     })
@@ -20,8 +20,8 @@ fn fib_static_50(b: &mut Bencher) {
 }
 
 #[bench]
-fn fib_c50(b: &mut Bencher) {
+fn fib_cpp_50(b: &mut Bencher) {
     b.iter(|| unsafe {
-        let _val = fib::fib_c(50);
+        let _val = fib::fib_cpp(50);
     })
 }

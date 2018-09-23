@@ -39,5 +39,5 @@ pub unsafe fn fib_static(n: usize) -> usize {
 }
 
 extern "C" {
-    pub fn fib_c(n: usize) -> usize;
+    pub fn fib_cpp(n: usize) -> usize;
 }
